@@ -1,26 +1,16 @@
 <template>
   <div id="app">
-    <jsonToExcel :beforeStart="ttttttttest('eeeee')" />
+    <jsonExportExcel/>
   </div>
 </template>
 
 <script>
-import jsonToExcel from "./plugin/jsonExportExcel";
+import jsonExportExcel from "./plugin/jsonExportExcel";
 
 export default {
   name: "App",
   components: {
-    jsonToExcel,
-  },
-  methods: {
-    ttttttttest(a) {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          console.log(a, "=========start");
-          resolve();
-        }, 5000);
-      });
-    },
+    jsonExportExcel,
   },
 };
 </script>

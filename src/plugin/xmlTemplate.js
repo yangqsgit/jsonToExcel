@@ -86,13 +86,13 @@ function template () {
         let cells = ''
         cellArray.forEach(cell => {
             if (typeof cell === 'object') {
-                if (cell.MergeCell && typeof cell.MergeCell === 'number' && cell.MergeCell !== 'e') {
-                    cells += `<Cell ss:MergeAcross="${parseInt(cell.MergeCell)}"><Data ss:Type="String">${cell.text + ''}</Data></Cell>`
+                if (cell.mergeCell && typeof cell.mergeCell === 'number' && cell.mergeCell !== 'e') {
+                    cells += `<Cell ss:MergeAcross="${parseInt(cell.mergeCell)}"><Data ss:Type="String"><![CDATA[${cell.text + ''}]]></Data></Cell>`
                 } else {
-                    throw new Error('cell.MergeCell should be number')
+                    throw new Error('cell.mergeCell should be number')
                 }
             } else if (typeof (cell + '') === 'string') {
-                cells += `<Cell><Data ss:Type="String">${cell + ''}</Data></Cell>`
+                cells += `<Cell><Data ss:Type="String"><![CDATA[${cell + ''}]]></Data></Cell>`
             } else {
                 throw new Error('cell should be object or string')
             }
@@ -106,13 +106,13 @@ function template () {
     const xmlHeader = function (header) {
         let headerText = ''
         if (typeof header === 'object') {
-            if (header.MergeCell && typeof header.MergeCell === 'number' && header.MergeCell !== 'e') {
-                headerText = `<Cell ss:StyleID="s52" ss:MergeAcross="${parseInt(header.MergeCell)}"><Data ss:Type="String">${header.text + ''}</Data></Cell>`
+            if (header.mergeCell && typeof header.mergeCell === 'number' && header.mergeCell !== 'e') {
+                headerText = `<Cell ss:StyleID="s52" ss:MergeAcross="${parseInt(header.mergeCell)}"><Data ss:Type="String"><![CDATA[${header.text + ''}]]></Data></Cell>`
             } else {
-                throw new Error('header.MergeCell should be number')
+                throw new Error('header.mergeCell should be number')
             }
         } else if (typeof header === 'string') {
-            headerText = `<Cell ss:StyleID="s52" ><Data ss:Type="String">${header + ''}</Data></Cell>`
+            headerText = `<Cell ss:StyleID="s52" ><Data ss:Type="String"><![CDATA[${header + ''}]]></Data></Cell>`
         } else {
             throw new Error('header should be object or string')
         }

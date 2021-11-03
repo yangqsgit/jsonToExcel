@@ -5,7 +5,7 @@
 <script>
 import xmlTemplate from "./xmlTemplate";
 export default {
-  name: "exportToExecl",
+  name: "jsonExportExcel",
   props: {
     btnText: {
       type: String,
@@ -27,9 +27,9 @@ export default {
           },
           {
             sheetName: "sheet2",
-            header: { MergeCell: 2, text: "header" },
+            header: { mergeCell: 2, text: "header" },
             rowList: [
-              ["mmmmmm", "ggggggg", { MergeCell: 2, text: 1111111111 }],
+              ["mmmmmm", "ggggggg", { mergeCell: 2, text: 1111111111 }],
               [111111, 222222],
             ],
           },
