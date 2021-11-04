@@ -5,40 +5,20 @@
 <script>
 import xmlTemplate from "./xmlTemplate";
 export default {
-  name: "jsonExportExcel",
+  name: "json-export-excel",
   props: {
     btnText: {
       type: String,
       default: "导出表格",
     },
+    sheetData: Object,
   },
   data() {
-    return {
-      sheetData: {
-        fileName: "示例表格",
-        sheetList: [
-          {
-            sheetName: "sheet1",
-            header: "adwdwdadw",
-            rowList: [
-              ["mmmmmm", "ggggggg"],
-              [111111, 222222],
-            ],
-          },
-          {
-            sheetName: "sheet2",
-            header: { mergeCell: 2, text: "header" },
-            rowList: [
-              ["mmmmmm", "ggggggg", { mergeCell: 2, text: 1111111111 }],
-              [111111, 222222],
-            ],
-          },
-        ],
-      },
-    };
+    return {};
   },
   methods: {
     exportExcel() {
+      if (!this.sheetData) return;
       const xmlData = this.generateXml(this.sheetData);
       const xmlBlob = this.base64ToBlob(xmlData);
       const _a = document.createElement("a");

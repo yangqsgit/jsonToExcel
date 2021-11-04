@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <jsonExportExcel/>
+    <json-export-excel />
   </div>
 </template>
 
 <script>
-import jsonExportExcel from "./plugin/jsonExportExcel";
-
 export default {
   name: "App",
-  components: {
-    jsonExportExcel,
-  },
+  components: { },
 };
 </script>
 
