@@ -1,6 +1,6 @@
-import jsonExportExcel from './jsonExportExcel'
+import jsonGenerateExcel from './jsonGenerateExcel'
 let plugin = {}
 plugin.install = function (Vue) {
-    Vue.component(jsonExportExcel.name, jsonExportExcel)
+    Vue.component(jsonGenerateExcel.name, jsonGenerateExcel)
 }
 export default plugin

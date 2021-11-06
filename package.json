@@ -1,17 +1,19 @@
 {
   "name": "jsontoexcel",
   "version": "0.1.0",
+  "description": "A plugin to export JSON as an excel from the browser",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "buildComp":"vue-cli-service build --target lib --name jsonExportExcel lib/jsonExportExcel.vue"
+    "buildComp": "vue-cli-service build --target lib --name jsonExportExcel lib/jsonExportExcel.vue"
   },
   "dependencies": {
     "cnpm": "^7.1.0",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-json-excel": "^0.3.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

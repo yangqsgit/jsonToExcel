@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <json-export-excel />
+    <json-generate-excel />
   </div>
 </template>
 

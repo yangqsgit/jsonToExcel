@@ -5,7 +5,7 @@
 <script>
 import xmlTemplate from "./xmlTemplate";
 export default {
-  name: "json-export-excel",
+  name: "json-generate-excel",
   props: {
     btnText: {
       type: String,
